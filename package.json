@@ -1,0 +1,19 @@
+{
+  "name": "blog-cms",
+  "version": "1.0.0",
+  "description": "Simple Blog Cms Using Graphql,MongoDB,Apollo",
+  "main": "App.js",
+  "dependencies": {
+    "apollo-datasource": "^0.7.0",
+    "apollo-datasource-mongodb": "^0.2.6",
+    "apollo-server": "^2.13.0",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ali Shirzad",
+  "license": "MIT"
+}
