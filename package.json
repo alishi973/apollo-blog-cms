@@ -8,7 +8,9 @@
     "apollo-datasource-mongodb": "^0.2.6",
     "apollo-server": "^2.13.0",
     "dotenv": "^8.2.0",
-    "graphql": "^15.0.0"
+    "graphql": "^15.0.0",
+    "mongodb": "^3.5.7",
+    "nodemon": "^2.0.3"
   },
   "devDependencies": {},
   "scripts": {
