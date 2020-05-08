@@ -1,4 +1,4 @@
-const jwt = require('jwt');
+const jwt = require('jsonwebtoken');
 module.exports = (token) => {
   if (!token) return { isAuth: false, userId: null };
   let decode;

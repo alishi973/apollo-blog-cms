@@ -99,7 +99,6 @@ module.exports = gql`
   }
 
   type Query {
-    test: [String]
     login(email: String!, password: String!): AuthData!
     posts(page: Int): PostData!
     post(search: FindPost): Post!

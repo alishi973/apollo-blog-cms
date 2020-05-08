@@ -7,6 +7,8 @@ const Schema = require('./Graphql/Schema');
 const { MongoClient } = require('mongodb');
 const models = require('./models');
 
+const { GetUser } = require('./helpers');
+
 const server = new ApolloServer({
   playground: true,
   introspection: true,
@@ -14,18 +16,19 @@ const server = new ApolloServer({
   resolvers: Resolvers,
   dataSources: () => ({
     users: new models.users(client.db().collection('users')),
+    posts: new models.posts(client.db().collection('posts')),
   }),
   context: ({ req }) => {
     // currentToken = currentToken.indexOf(' ') !== 0 ? currentToken : currentToken.split(/\ /)[1]
     const token = req.headers.authorization || '';
-    const user = 'test user';
-    return { user };
+    const user = GetUser(token);
+    return user;
   },
 });
 
 const client = new MongoClient('mongodb://localhost:27017/posts', { useUnifiedTopology: true });
 client.connect().then((_) => {
-  server.listen(process.env.PORT || 1234).then(({ url }) => {
+server.listen(process.env.PORT || 1234).then(({ url }) => {
     console.log(url);
   });
 });
