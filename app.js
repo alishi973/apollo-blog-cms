@@ -16,6 +16,7 @@ const server = new ApolloServer({
     users: new models.users(client.db().collection('users')),
   }),
   context: ({ req }) => {
+    // currentToken = currentToken.indexOf(' ') !== 0 ? currentToken : currentToken.split(/\ /)[1]
     const token = req.headers.authorization || '';
     const user = 'test user';
     return { user };
