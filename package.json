@@ -7,6 +7,7 @@
     "apollo-datasource": "^0.7.0",
     "apollo-datasource-mongodb": "^0.2.6",
     "apollo-server": "^2.13.0",
+    "dataloader": "^2.0.0",
     "dotenv": "^8.2.0",
     "graphql": "^15.0.0",
     "jsonwebtoken": "^8.5.1",
